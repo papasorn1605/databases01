@@ -12,7 +12,6 @@ export default function EmployeeIndex({ employees, query }) {
     const [search, setSearch] = useState(query || '');
     const [sort, setSort] = useState({ column: '', order: '' });
 
-    // ดึงค่าค้นหาจาก URL เมื่อโหลดหน้า
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
         const searchQuery = urlParams.get('search') || '';

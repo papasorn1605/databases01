@@ -1,6 +1,5 @@
-/* Container */
 .container {
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 20px auto;
     padding: 20px;
     font-family: 'Roboto', Arial, sans-serif;
@@ -9,8 +8,6 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow-x: auto;
 }
-
-/* Title */
 .title {
     font-size: 24px;
     font-weight: bold;
@@ -20,8 +17,6 @@
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-
-/* Search Form */
 .search-form {
     margin-bottom: 20px;
     display: flex;
@@ -29,7 +24,6 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
 .search-input {
     border: 1px solid #d7ccc8;
     border-radius: 8px;
@@ -39,13 +33,11 @@
     font-size: 14px;
     transition: 0.3s ease;
 }
-
 .search-input:focus {
     border-color: #4e342e;
     outline: none;
     box-shadow: 0 0 8px rgba(78, 52, 46, 0.2);
 }
-
 .search-button,
 .refresh-button {
     padding: 10px 20px;
@@ -57,30 +49,23 @@
     transition: 0.3s ease;
     color: #ffffff;
 }
-
 .search-button {
     background-color: #4e342e;
 }
-
 .search-button:hover {
     background-color: #3e2723;
 }
-
 .refresh-button {
     background-color: #8d6e63;
 }
-
 .refresh-button:hover {
     background-color: #6d4c41;
 }
-
-/* Table */
 .table-container {
     overflow-x: auto;
     margin-top: 20px;
     border-radius: 10px;
 }
-
 .employee-table {
     width: 100%;
     border-collapse: collapse;
@@ -89,39 +74,31 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
-
 .employee-table th,
 .employee-table td {
     padding: 14px;
     border: 1px solid #d7ccc8;
     font-size: 14px;
 }
-
 .employee-table th {
     background-color: #f5f5f5;
     color: #4e342e;
     text-transform: uppercase;
     font-weight: bold;
 }
-
 .employee-table td {
     color: #6d4c41;
 }
-
 .employee-table tr:nth-child(even) {
     background-color: #fafafa;
 }
-
 .employee-table tr:nth-child(odd) {
     background-color: #ffffff;
 }
-
 .employee-table tr:hover {
     background-color: #f3e5d7;
     transition: background-color 0.3s ease;
 }
-
-/* Pagination */
 .pagination {
     margin-top: 20px;
     display: flex;
@@ -129,7 +106,6 @@
     gap: 12px;
     flex-wrap: wrap;
 }
-
 .pagination-button {
     padding: 10px 20px;
     border-radius: 8px;
@@ -142,19 +118,16 @@
     transition: 0.3s ease;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-
 .pagination-button.active {
     background-color: #4e342e;
     color: #ffffff;
     border: none;
 }
-
 .pagination-button:hover:not(:disabled) {
     background-color: #3e2723;
     color: #ffffff;
     border-color: #3e2723;
 }
-
 .pagination-button:disabled {
     background-color: #f1f1f1;
     color: #d7ccc8;
@@ -162,8 +135,6 @@
     cursor: not-allowed;
     box-shadow: none;
 }
-
-/* Responsive Design */
 @media (max-width: 768px) {
     .search-input {
         flex: 1 1 100%;
