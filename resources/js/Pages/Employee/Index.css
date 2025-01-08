@@ -1,0 +1,165 @@
+/* Container */
+.container {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f7f3eb;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Title */
+.title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #4e342e;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Search Form */
+.search-form {
+    margin-bottom: 15px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.search-input {
+    border: 1px solid #d7ccc8;
+    border-radius: 6px;
+    padding: 10px; /* ปรับขนาด padding ให้ใหญ่ขึ้นเล็กน้อย */
+    flex: 0 0 180px; /* เพิ่มความกว้างของช่องค้นหา */
+    background-color: #ffffff;
+    transition: 0.3s ease;
+    font-size: 13px; /* ขนาดฟอนต์ที่เล็กลงเล็กน้อย */
+}
+
+.search-input:focus {
+    border-color: #4e342e;
+    outline: none;
+    box-shadow: 0 0 6px rgba(78, 52, 46, 0.2);
+}
+
+.search-button,
+.refresh-button {
+    padding: 8px 16px; /* เพิ่มขนาด padding ของปุ่ม */
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+    font-size: 13px; /* ปรับขนาดฟอนต์ */
+    color: #ffffff;
+}
+
+.search-button {
+    background-color: #4e342e;
+}
+
+.search-button:hover {
+    background-color: #3e2723;
+}
+
+.refresh-button {
+    background-color: #8d6e63;
+}
+
+.refresh-button:hover {
+    background-color: #6d4c41;
+}
+
+/* Table */
+.table-container {
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.employee-table th {
+    padding: 12px;
+    border: 1px solid #d7ccc8;
+    background-color: #f5f5f5;
+    color: #4e342e;
+    text-align: center;
+    font-size: 13px; /* ลดขนาดฟอนต์ */
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.employee-table td {
+    padding: 12px;
+    border: 1px solid #d7ccc8;
+    text-align: center;
+    font-size: 13px; /* ลดขนาดฟอนต์ */
+    color: #6d4c41;
+}
+
+.even-row {
+    background-color: #fafafa;
+}
+
+.odd-row {
+    background-color: #ffffff;
+}
+
+.employee-table tr:hover {
+    background-color: #f1e0c6;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.pagination-button {
+    padding: 8px 16px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #4e342e;
+    border: 2px solid #4e342e;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pagination-button.active {
+    background-color: #4e342e;
+    color: #ffffff;
+    border: none;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background-color: #3e2723;
+    color: #ffffff;
+    border-color: #3e2723;
+}
+
+.pagination-button:disabled {
+    background-color: #f1f1f1;
+    color: #d7ccc8;
+    border: 2px solid #e0e0e0;
+    cursor: not-allowed;
+    box-shadow: none;
+}
