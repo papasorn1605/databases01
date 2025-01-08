@@ -1,19 +1,20 @@
 /* Container */
 .container {
-    max-width: 1100px;
+    max-width: 1200px; 
     margin: 20px auto;
     padding: 20px;
     font-family: 'Roboto', Arial, sans-serif;
-    background-color: #f7f3eb;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    background-color: #f9f6f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
 }
 
 /* Title */
 .title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     color: #4e342e;
     text-align: center;
     text-transform: uppercase;
@@ -22,38 +23,38 @@
 
 /* Search Form */
 .search-form {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     display: flex;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 .search-input {
     border: 1px solid #d7ccc8;
-    border-radius: 6px;
-    padding: 10px; /* ปรับขนาด padding ให้ใหญ่ขึ้นเล็กน้อย */
-    flex: 0 0 180px; /* เพิ่มความกว้างของช่องค้นหา */
+    border-radius: 8px;
+    padding: 12px;
+    flex: 1 1 200px;
     background-color: #ffffff;
+    font-size: 14px;
     transition: 0.3s ease;
-    font-size: 13px; /* ขนาดฟอนต์ที่เล็กลงเล็กน้อย */
 }
 
 .search-input:focus {
     border-color: #4e342e;
     outline: none;
-    box-shadow: 0 0 6px rgba(78, 52, 46, 0.2);
+    box-shadow: 0 0 8px rgba(78, 52, 46, 0.2);
 }
 
 .search-button,
 .refresh-button {
-    padding: 8px 16px; /* เพิ่มขนาด padding ของปุ่ม */
-    border-radius: 6px;
+    padding: 10px 20px;
+    border-radius: 8px;
     border: none;
     cursor: pointer;
     font-weight: bold;
+    font-size: 14px;
     transition: 0.3s ease;
-    font-size: 13px; /* ปรับขนาดฟอนต์ */
     color: #ffffff;
 }
 
@@ -83,65 +84,63 @@
 .employee-table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: 6px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.employee-table th,
+.employee-table td {
+    padding: 14px;
+    border: 1px solid #d7ccc8;
+    font-size: 14px;
 }
 
 .employee-table th {
-    padding: 12px;
-    border: 1px solid #d7ccc8;
     background-color: #f5f5f5;
     color: #4e342e;
-    text-align: center;
-    font-size: 13px; /* ลดขนาดฟอนต์ */
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-weight: bold;
 }
 
 .employee-table td {
-    padding: 12px;
-    border: 1px solid #d7ccc8;
-    text-align: center;
-    font-size: 13px; /* ลดขนาดฟอนต์ */
     color: #6d4c41;
 }
 
-.even-row {
+.employee-table tr:nth-child(even) {
     background-color: #fafafa;
 }
 
-.odd-row {
+.employee-table tr:nth-child(odd) {
     background-color: #ffffff;
 }
 
 .employee-table tr:hover {
-    background-color: #f1e0c6;
+    background-color: #f3e5d7;
+    transition: background-color 0.3s ease;
 }
 
 /* Pagination */
 .pagination {
-    margin-top: 15px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     flex-wrap: wrap;
 }
 
 .pagination-button {
-    padding: 8px 16px;
-    border-radius: 6px;
+    padding: 10px 20px;
+    border-radius: 8px;
     background-color: #ffffff;
     color: #4e342e;
     border: 2px solid #4e342e;
     font-weight: bold;
-    font-size: 13px;
+    font-size: 14px;
     cursor: pointer;
     transition: 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 .pagination-button.active {
@@ -162,4 +161,28 @@
     border: 2px solid #e0e0e0;
     cursor: not-allowed;
     box-shadow: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-input {
+        flex: 1 1 100%;
+    }
+
+    .search-button,
+    .refresh-button {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .employee-table th,
+    .employee-table td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .pagination-button {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
 }
